@@ -25,24 +25,6 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Remove="Data\DbContext.cs" />
-    <Compile Remove="Data\UserVM.cs" />
-    <Compile Remove="Models\Account.cs" />
-    <Compile Remove="Models\User.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Data\DbContext.cs" />
-    <None Include="Data\UserVM.cs" />
-    <None Include="Models\Account.cs" />
-    <None Include="Models\User.cs" />
-  </ItemGroup>
-
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
