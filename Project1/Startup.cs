@@ -55,6 +55,11 @@ namespace Project1
                      ValidateAudience = false
                  };
              });
+
+            services.AddScoped<IUserRepository, UserRepository>().AddJsonOptions(opt => {
+            opt.SerializerSettings.ReferenceLoopHandling =
+            Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            }); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
