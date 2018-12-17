@@ -67,6 +67,12 @@ namespace Project1.Controllers
 
         }
 
+        [HttpPost("UpdateUser")]
+        public async Task<IActionResult> UpdateUser(LoginVM user, E data)
+        {
+            
+        }
+
         private async Task<IActionResult> SeedDb()
         {
             var userData = System.IO.File.ReadAllText("Data/UserData.json");
