@@ -7,8 +7,12 @@ namespace Project1.Controllers
     [Authorize]
     public class UsersController : ControllerBase
     {
-
-        public UsersController()
+        [HttpPost("GetUser")]
+        public async Task<IActionResult> GetUser(LoginVM user)
+        {
+            var userDetails = _mapper.Map<UserDetailsDTO>(user);
+        }
+            public UsersController()
         {
         }
     }
